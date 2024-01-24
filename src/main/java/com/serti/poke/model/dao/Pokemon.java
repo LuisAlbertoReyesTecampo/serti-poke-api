@@ -1,8 +1,10 @@
 package com.serti.poke.model.dao;
 
-import javax.persistence.Column;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
 
 import lombok.Data;
 
@@ -12,12 +14,13 @@ public class Pokemon {
 
 	@Id
 	private int id;
-	@Column
 	private String name;
-	@Column
 	private int height;
-	@Column
-	private String generation;
-	@Column
-	private String sprites;
+	private PastTypes pastTypes;
+	private Sprites sprites;
+	private int weight;
+	private List<Abilities> ablities;
+	private Species especies;
+	private PokemonSpecie specie;
+	private PokemonEvolution evolution;
 }

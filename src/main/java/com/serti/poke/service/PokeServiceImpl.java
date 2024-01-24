@@ -1,7 +1,5 @@
 package com.serti.poke.service;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -41,13 +39,10 @@ public class PokeServiceImpl implements PokeService{
 			pokemon = helperInfo.getSpecies(root, pokemon);
 			
 		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("Consumo existoso");
 		return pokemon;
 	}
 	
@@ -65,13 +60,10 @@ public class PokeServiceImpl implements PokeService{
 			specieDto = helperInfo.getColor(root,specieDto);
 			specieDto = helperInfo.getevolutionChain(root,specieDto);
 		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		
 		return specieDto;
 	}
@@ -88,10 +80,8 @@ public class PokeServiceImpl implements PokeService{
 			root = mapper.readTree(response.getBody());
 			evolutionDto = helperInfo.getEvolution(root,evolutionDto);
 		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

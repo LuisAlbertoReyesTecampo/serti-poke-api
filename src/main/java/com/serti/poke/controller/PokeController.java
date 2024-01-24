@@ -27,6 +27,6 @@ public class PokeController {
 		PokemonEvolutionDto evolutionDto = service.getEvolutionByUrl(specieDto.getEvolution().getUrl());
 		pokemonDto.setSpecieDto(specieDto);
 		pokemonDto.setEvolutionDto(evolutionDto);
-		return new ResponseEntity<PokemonDto>(pokemonDto, HttpStatus.OK);
+		return new ResponseEntity<>(pokemonDto, HttpStatus.OK);
 	}
 }
