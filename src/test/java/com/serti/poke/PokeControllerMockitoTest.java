@@ -6,20 +6,16 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.serti.poke.controller.PokeController;
 import com.serti.poke.model.dto.AbilitiesDto;
 import com.serti.poke.model.dto.ChainEvolutionDto;
 import com.serti.poke.model.dto.ColorPokemonDto;
 import com.serti.poke.model.dto.EvolutionChainDto;
-import com.serti.poke.model.dto.PastTypesDto;
 import com.serti.poke.model.dto.PokemonDto;
 import com.serti.poke.model.dto.PokemonEvolutionDto;
 import com.serti.poke.model.dto.PokemonSpecieDto;
